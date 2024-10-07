@@ -1,95 +1,85 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// pages/index.js
+import React from "react";
+import { Container, Typography, Button, Box, Grid } from "@mui/material";
 
-export default function Home() {
+const Index = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <Container maxWidth="lg">
+        {/* Header Section */}
+        <Box textAlign="center" sx={{ my: 8 }}>
+          <Typography variant="h2" fontWeight="bold">
+            Welcome to E-Commerce Anomaly Analyst
+          </Typography>
+          <Typography variant="h5" sx={{ my: 2 }}>
+            Experience AI-powered conversations like never before.
+          </Typography>
+          <Button variant="contained" color="primary" sx={{ mt: 3 }}>
+            Try Now
+          </Button>
+        </Box>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Feature Section */}
+        <Grid container spacing={4} sx={{ my: 8 }}>
+          <Grid item xs={12} md={4}>
+            <Box textAlign="center">
+              <img
+                src="/images/feature1.png"
+                alt="Feature 1"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+                Intelligent Responses
+              </Typography>
+              <Typography color="textSecondary">
+                Get accurate and meaningful answers for your queries.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Box textAlign="center">
+              <img
+                src="/images/feature2.png"
+                alt="Feature 2"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+                Personalization
+              </Typography>
+              <Typography color="textSecondary">
+                Tailor-made responses based on your preferences.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Box textAlign="center">
+              <img
+                src="/images/feature3.png"
+                alt="Feature 3"
+                style={{ width: "100%", height: "auto" }}
+              />
+              <Typography variant="h6" fontWeight="bold" sx={{ mt: 2 }}>
+                Seamless Experience
+              </Typography>
+              <Typography color="textSecondary">
+                Enjoy smooth and intuitive conversations.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        {/* Call-to-Action Section */}
+        <Box textAlign="center" sx={{ my: 8 }}>
+          <Typography variant="h4" fontWeight="bold">
+            Ready to start?
+          </Typography>
+          <Button variant="contained" color="secondary" sx={{ mt: 3 }}>
+            Try Now
+          </Button>
+        </Box>
+      </Container>
     </main>
   );
-}
+};
+
+export default Index;
