@@ -11,9 +11,6 @@ const Index = () => {
           <Typography variant="h2" fontWeight="bold">
             Welcome to E-Commerce Anomaly Analyst
           </Typography>
-          <Typography variant="h5" sx={{ my: 2 }}>
-            Experience AI-powered conversations like never before.
-          </Typography>
           <Button variant="contained" color="primary" sx={{ mt: 3 }}>
             Try Now
           </Button>
@@ -67,16 +64,6 @@ const Index = () => {
             </Box>
           </Grid>
         </Grid>
-
-        {/* Call-to-Action Section */}
-        <Box textAlign="center" sx={{ my: 8 }}>
-          <Typography variant="h4" fontWeight="bold">
-            Ready to start?
-          </Typography>
-          <Button variant="contained" color="secondary" sx={{ mt: 3 }}>
-            Try Now
-          </Button>
-        </Box>
       </Container>
     </main>
   );
